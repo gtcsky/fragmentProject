@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_676769"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/column_id"
+        style="@style/account_table_item">
+    </TextView>
+    <TextView
+        android:id="@+id/column_name"
+        style="@style/account_table_item">
+    </TextView>
+    <TextView
+        android:id="@+id/column_amount"
+        style="@style/account_table_item">
+    </TextView>
+</LinearLayout>

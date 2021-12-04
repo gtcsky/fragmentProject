@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_676769"
+    tools:context=".TransactionActivity">
+    <TextView
+        android:id="@+id/transaction_bar"
+        android:text="@string/string_transaction"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <Button
+        android:id="@+id/transfer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="74dp"
+        android:text="@string/string_transfer"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/title_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/title_name"
+        app:layout_constraintTop_toBottomOf="@+id/transaction_bar"
+        android:text="@string/string_id"
+        app:layout_constraintHorizontal_weight="1"
+        style="@style/account_table_title">
+    </TextView>
+    <TextView
+        android:id="@+id/title_name"
+        app:layout_constraintTop_toBottomOf="@+id/transaction_bar"
+        app:layout_constraintLeft_toRightOf="@id/title_id"
+        app:layout_constraintRight_toLeftOf="@+id/title_amount"
+        android:text="@string/string_name"
+        app:layout_constraintHorizontal_weight="1"
+        style="@style/account_table_title" >
+    </TextView>
+    <TextView
+        android:id="@+id/title_amount"
+        app:layout_constraintTop_toBottomOf="@+id/transaction_bar"
+        style="@style/account_table_title"
+        app:layout_constraintLeft_toRightOf="@id/title_name"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/string_amount"
+        app:layout_constraintHorizontal_weight="1">
+    </TextView>
+    <ListView
+        app:layout_constraintVertical_weight="3"
+        android:id="@+id/amount_list_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+
+    <TextView
+        android:id="@+id/textView_input_name"
+        android:textSize="13sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/input_name_content"
+        app:layout_constraintHorizontal_weight="1.5"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/transfer_to_name"
+        app:layout_constraintBottom_toTopOf="@+id/transfer_btn" />
+    <EditText
+        android:id="@+id/input_name_content"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@+id/textView_input_name"
+        app:layout_constraintRight_toLeftOf="@+id/textView_output_name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_input_name"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="2"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView_output_name"
+        android:textSize="13sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/input_name_content"
+        app:layout_constraintRight_toLeftOf="@+id/output_name_content"
+        app:layout_constraintHorizontal_weight="1.5"
+        android:layout_marginBottom="20dp"
+        android:text="@string/transfer_from"
+        app:layout_constraintBottom_toTopOf="@+id/transfer_btn" />
+
+    <EditText
+        android:id="@+id/output_name_content"
+        app:layout_constraintLeft_toRightOf="@+id/textView_output_name"
+        app:layout_constraintRight_toLeftOf="@+id/textView_input_amount"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_input_name"
+        android:layout_width="0dp"
+        android:textSize="13sp"
+        app:layout_constraintHorizontal_weight="2"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView_input_amount"
+        android:textSize="13sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/output_name_content"
+        app:layout_constraintRight_toLeftOf="@+id/amount_input_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_input_name"
+        android:text="@string/transfer_amount"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/amount_input_content"
+        app:layout_constraintLeft_toRightOf="@+id/textView_input_amount"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_input_name"
+        app:layout_constraintHorizontal_weight="2"
+        android:layout_width="0dp"
+        android:inputType="number"
+        android:textSize="13sp"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/name_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/string_name"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <EditText
+        android:id="@+id/name_content"
+        app:layout_constraintLeft_toRightOf="@+id/textView_name"
+        app:layout_constraintRight_toLeftOf="@+id/textView_amount"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_name"
+        android:layout_width="0dp"
+        android:textSize="13sp"
+        app:layout_constraintHorizontal_weight="3"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/name_content"
+        app:layout_constraintRight_toLeftOf="@+id/amount_content"
+        android:layout_marginBottom="32dp"
+        android:textSize="13sp"
+        android:text="@string/string_amount"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <EditText
+        android:id="@+id/amount_content"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@+id/textView_amount"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_name"
+        app:layout_constraintHorizontal_weight="3"
+        android:layout_width="0dp"
+        android:inputType="number"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <Button
+        android:id="@+id/button_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/transfer_btn"
+        android:text="@string/string_add"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_amount" />
+</androidx.constraintlayout.widget.ConstraintLayout>

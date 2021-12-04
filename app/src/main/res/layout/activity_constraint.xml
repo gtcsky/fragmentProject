@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_676769"
+    tools:context=".ConstraintActivity">
+
+    <!--    约束定位  中的相对定位演示  -->
+    <TextView
+        android:id="@+id/Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/black_500"
+        android:text="@string/position_test"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/butterfly_desc"
+        android:src="@mipmap/butterfly"
+        app:layout_constraintCircle="@id/Textview"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+    <!--    约束定位  中的居中对齐演示  -->
+    <TextView
+        android:id="@+id/center_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/center_view"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <!--    约束定位  中的居中对齐附加偏移演示  -->
+    <TextView
+        android:id="@+id/center_margin_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/constraint_margin"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <!--    约束定位  中的百分比约束偏移  -->
+    <TextView
+        android:id="@+id/center_bias_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/constraint_bias"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55">
+    </TextView>
+    <!--    约束定位  width或height设置为0dp即为match Parent效果  -->
+    <TextView
+        android:id="@+id/center_match_parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/green_200"
+        android:paddingStart="50dp"
+        android:paddingEnd="0dp"
+        android:text="width=0dp  padding=50dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+    </TextView>
+    <!--    约束定位  width或height设置为0dp即为match Parent效果  -->
+    <TextView
+        android:id="@+id/center_match_and_margin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:background="@color/grey_500"
+        android:paddingStart="50dp"
+        android:paddingEnd="0dp"
+        android:text="@string/margin_50dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23">
+    </TextView>
+    <!--    约束定位  width或height设置为0dp DimensionRatio 长宽比约束 -->
+    <TextView
+        android:id="@+id/DimensionRatio_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/grey_500"
+        android:text="@string/dimension_ratio"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="W,5:2"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28">
+    </TextView>
+
+
+    <!--    约束定位  链式定位布局  -->
+    <TextView
+        android:id="@+id/chain_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_200"
+        android:gravity="center_horizontal"
+        android:text="@string/chain_2"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/chain_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+    </TextView>
+
+    <TextView
+        android:id="@+id/chain_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/green_200"
+        android:gravity="center_horizontal"
+        android:text="@string/chain_3"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toRightOf="@+id/chain_1"
+        app:layout_constraintRight_toLeftOf="@+id/chain_3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+    </TextView>
+
+    <TextView
+        android:id="@+id/chain_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_500"
+        android:gravity="center_horizontal"
+        android:text="@string/chain_4"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintLeft_toRightOf="@+id/chain_2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+    </TextView>
+
+    <!--    barrier进行分隔约束,以下范例,两个View始终在barrier左侧,而第三个View始终在barrier右侧        -->
+    <TextView
+        android:id="@+id/left_top_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@color/red_200"
+        android:text="@string/barrier_left_top"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
+    </TextView>
+
+    <TextView
+        android:id="@+id/left_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:background="@color/green_200"
+        android:text="@string/barrier_left_bottom"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/left_top_view">
+    </TextView>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="left_top_view,left_bottom"
+        tools:layout_editor_absoluteX="159dp">
+    </androidx.constraintlayout.widget.Barrier>
+
+    <TextView
+        android:id="@+id/right_side_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@color/blue_200"
+        android:text="@string/barrier_right"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/barrier_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.61">
+    </TextView>
+    <!--    分组,可用于控制View的可见性参数-->
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/id_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="left_top_view,right_side_view,left_bottom">
+    </androidx.constraintlayout.widget.Group>
+
+    <!--    PlaceHolder可以强制把其它位置的控件移动当PlaceHolder所在的位置-->
+    <androidx.constraintlayout.widget.Placeholder
+        android:id="@+id/id_place_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </androidx.constraintlayout.widget.Placeholder>
+
+    <TextView
+        android:id="@+id/place_holder_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green_200"
+        android:text="@string/placeholder_context"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

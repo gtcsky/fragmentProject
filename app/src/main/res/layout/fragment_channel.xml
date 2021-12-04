@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_676769"
+    tools:context=".fragments.ChannelFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:columnCount="5"
+        android:rowCount="4"
+        android:layout_height="300dp">
+    </GridLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/main_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/fragmet_title_info"
+        android:textSize="20sp"
+        android:textColor="@color/yellow_600" >
+       </TextView>
+       <TextView
+           style="@style/fragment_info_item"
+           android:text="@string/grid_layout_info"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+       </TextView>
+       <TextView
+           style="@style/fragment_info_item"
+           android:text="@string/list_view_info"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+       </TextView>
+       <TextView
+           style="@style/fragment_info_item"
+           android:text="@string/recycle_view_info"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+       </TextView>
+    </LinearLayout>
+
+</RelativeLayout>
